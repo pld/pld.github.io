@@ -5,8 +5,14 @@ title: About
 
 # About
 
+I am a researcher and Entrepreneur specializing in Computer Science and
+Artificial Intelligence.
 
-Contact using peter *at* helioid *dot* com.
+I am specifically interested in search, learning, and data mining using recent
+research in information retrieval, machine learning, and natural language
+processing.
+
+Contact me via [peter@helioid.com](peter@helioid.com).
 
 Open source software is available as [pld on github](https://github.com/pld).
 
