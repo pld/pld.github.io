@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="Peter Lubell-Doughtie" />
 {% for css in site.css %}<link rel="stylesheet" type="text/css" media="all" href="{{ css }}" />{% endfor %}
-<title>Peter Lubell-Doughtie | {{ page.title }}</title>
+<title>Peter Lubell-Doughtie{% if page.title != 'Home' %} | {{ page.title }}{% endif %}</title>
 <link rel="shortcut icon" href="/assets/images/favicon.ico" />
 <link rel="icon" href="/assets/images/favicon.ico" />
 </head>
@@ -20,7 +20,7 @@
     <a href="/projects">projects</a><br/>
     <a href="/archive">archive</a><br/><br/>
     <div class="subscribe">
-        <a href="https://github.com/pld">github.com/pld</a><br/>
+        <a href="https://github.com/pld">github/pld</a><br/>
         <a href="http://helioid.com/">helioid</a>
     </div>
   </div>
