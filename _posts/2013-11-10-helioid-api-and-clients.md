@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Distributed Classification with ADMM
+title: Ruby and Clojure client libraries for the Helioid API
 categories:
 - General
 tags: []
