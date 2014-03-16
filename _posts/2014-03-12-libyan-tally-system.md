@@ -18,7 +18,7 @@ throughout the country, on off-shore oil rigs, and at international voting
 centers throughout the world.
 
 <p align="center">
-<img src="assets/images/2014-03-12/intake-section.jpg"/>
+<img src="/assets/images/2014-03-12/intake-section.jpg"/>
 </p>
 
 The Libyan [High National Election Commission](http://hnec.ly/) has generously made
