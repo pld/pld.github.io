@@ -5,8 +5,8 @@ title: About
 
 # About
 
-I am a researcher and Entrepreneur specializing in Computer Science and
-Artificial Intelligence.
+I am a researcher and entrepreneur specializing in computer science and
+artificial intelligence.
 
 I am specifically interested in search, learning, and data mining using recent
 research in information retrieval, machine learning, and natural language

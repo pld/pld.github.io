@@ -5,6 +5,8 @@ title: Home
 
 ### Selected Projects
 
+Please note that this list has not been maintained since 2011.
+
 ### Research
 
 **Information Retrieval**
