@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ona builds the Tally software for the Libyan Elections
+title: Ona builds tally software for the Libyan elections
 categories:
 - General
 tags: []
