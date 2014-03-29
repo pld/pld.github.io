@@ -1,5 +1,6 @@
 body {
 	background-color: #fffffc;
+        background-image: url('/assets/images/tegmark_1997_we_are_here_in_space_time.png');
 	font-family: 'Open Sans', sans-serif;
 	color: #000;
 	margin: 20px 0 0 0;
@@ -24,6 +25,8 @@ li {
 
 .post {
 	text-align: justify;
+        background: #fffffc;
+        padding: 1em;
 }
 
 .post h3 {
@@ -137,6 +140,12 @@ blockquote {
 
 .container_12 {
     margin-top: 3em;
+}
+
+.container_12 .grid_3 {
+    background: #fffffc;
+    padding: 0.7em;
+    margin: 0
 }
 
 ol ol {
