@@ -17,7 +17,7 @@ constitutional assembly elections.  These votes were cast
 throughout the country, on off-shore oil rigs, and at international voting
 centers throughout the world.
 
-<p align="center">
+<p class="center">
 <img src="/assets/images/2014-03-12/intake-section.jpg"/>
 </p>
 
