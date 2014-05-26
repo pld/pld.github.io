@@ -5,9 +5,12 @@ title: Home
 
 ### Selected Projects
 
-Please note that this list has not been maintained since 2011.
-
 ### Research
+
+**Data Analysis**
+
+* 2013 [Bamboo: Realtime Data Analysis](http://bamboo.io/)
+* 2012 [Formhub: Mobile Data Collection Made Easy](/general/2012/07/22/presenting-formhub-at-mdm-2012.html)
 
 **Information Retrieval**
 
@@ -17,6 +20,7 @@ Please note that this list has not been maintained since 2011.
 
 **Machine Learning**
 
+* 2013 [Distributed Classification with ADMM](/general/2013/10/09/presenting-at-ieee-big-data.html)
 * 2011 [Model Selection](/projects/research/model-selection.html)
 * 2010 [Multiagent Reainforcement Learning](/projects/research/multiagent-learning.html)
 * 2010 [Echo State Networks](/projects/research/echo-state-networks.html)
@@ -39,6 +43,13 @@ Please note that this list has not been maintained since 2011.
 * 2003 [Evolving Sorting Networks with Genetic Programming](/projects/research/sorting-networks.html)
 
 ### Software Development
+
+**Ona**
+
+* 2014 [Ona Data Management Platform](https://ona.io)
+* 2014 [Tally-Ho Election Tool](https://github.com/onaio/tally-ho)
+
+**Helioid**
 
 * 2011 [Helioid Categorized Search](/projects/software/helioid.html)
 * 2011 [Europe Travel Guide](/projects/software/europe-travel-guide.html)
