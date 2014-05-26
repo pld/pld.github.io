@@ -7,11 +7,6 @@ title: Home
 
 ### Research
 
-**Data Analysis**
-
-* 2013 [Bamboo: Realtime Data Analysis](http://bamboo.io/)
-* 2012 [Formhub: Mobile Data Collection Made Easy](/general/2012/07/22/presenting-formhub-at-mdm-2012.html)
-
 **Information Retrieval**
 
 * 2011 [Improving Result Diversification using PLSI](/projects/research/result-diversification.html)
@@ -48,6 +43,11 @@ title: Home
 
 * 2014 [Ona Data Management Platform](https://ona.io)
 * 2014 [Tally-Ho Election Tool](https://github.com/onaio/tally-ho)
+
+**The Sustainable Engineering Laboratory (SEL) at Columbia University**
+
+* 2013 [Bamboo: Realtime Data Analysis](http://bamboo.io/)
+* 2012 [Formhub: Mobile Data Collection Made Easy](/general/2012/07/22/presenting-formhub-at-mdm-2012.html)
 
 **Helioid**
 
