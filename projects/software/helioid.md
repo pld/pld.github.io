@@ -10,7 +10,7 @@ meta:
   _edit_last: '1'
   _wp_page_template: default
 ---
-[Helioid]("http://www.helioid.com") is a visual search and aggregation tool
+[Helioid](http://www.helioid.com) is a visual search and aggregation tool
 that enables information exploration.  Using Helioid’s search refinement tools
 you can find and explore what  you are looking for by interactively narrowing your search results.  Using Helioid’s aggregation tools you can gather and parse relevant information quickly and easily.
 
