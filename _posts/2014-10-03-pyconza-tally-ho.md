@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PyConZA 2014 - Writing Python Code to Decide an Election
+title: Writing Python Code to Decide an Election
 categories:
 - General
 tags: []
