@@ -15,4 +15,4 @@ development.
 I release open source software as [pld on github](https://github.com/pld).
 
 We are compiling photos of [Doris Lubell](
-http://www.dorislubell.org/)'s artwork.
+http://dorislubell.org/)'s artwork.
