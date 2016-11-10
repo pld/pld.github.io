@@ -29,3 +29,6 @@ Real world examples they can implement in their own workflow and organizations,
 Insight into what succeeded (quick iteration with prioritization) and what was challenging (nothing being static),
 Anecdotes and coherent arguments they can take back to their organization to advocate for best practices.
 
+Below is the full video of my presentation:
+
+<iframe src="https://player.vimeo.com/video/155076283?color=ff9933" width="624" height="351" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
