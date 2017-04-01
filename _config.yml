@@ -1,9 +1,9 @@
 exclude: ['README.md', 'Rakefile', 'Gemfile', 'Gemfile.lock']
 lsi: false
 name: pld
-markdown: redcarpet
+markdown: kramdown
 paginate: 5
-pygments: true
+highlighter: true
 safe: true
 
 css:
