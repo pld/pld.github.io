@@ -29,7 +29,9 @@ The queries may be complex, e.g. containing grouping, filtering, and aggregation
 
 When all integrated, the data flow looks like this:
 
-<img alt="data-flow" src="/assets/images/2017-08-31/data-flow.png" width="600px"/>
+<img alt="data-flow" src="/assets/images/2017-08-31/data-flow.png" width="590px"/>
+
+<!-- more -->
 
 Below we will walk through what we've done so far to build this system and provide instructions that you can follow along to get it set-up yourself for testing. The below is useful to understand the different tools and the processes they rely on.
 
@@ -51,7 +53,7 @@ On macOS we can install NiFi with `brew install nifi`, and then run it with:
 
 After that NiFi will be available on [http://localhost:8080/](http://localhost:8080/). Once you have loaded NiFi you can create processor to fetch, store, or process data as well as describe the connections between these processor. To get started quickly here's a [Ona API NiFi flow](/assets/files/2017-08-31/Ona_API_Pull.xml) in XML. This lets you pull data from the Ona API every 60 seconds and route it to Kafka. The imported flow will look like below:
 
-<img alt="nifi-template" src="/assets/images/2017-08-31/nifi-template.png" width="600px"/>
+<img alt="nifi-template" src="/assets/images/2017-08-31/nifi-template.png" width="590px" style="border: 1px solid #e0e0e0;"/>
 
 If you read through the flow, you'll see that we do a number of preprocessing steps before writing the data. When `InvokeHTTP` runs it will output API data which is an array of JSON maps. We then convert this batch output into a single output per JSON map using the `SplitJSON` component. This will, for example, take a single record that is an array of 10 JSON maps and convert it into 10 records, each of which is a single JSON map.
 
@@ -107,7 +109,7 @@ This will create the KeyStore `keystore.jks` and the TrustStore `cacerts.jks` wi
 
 To use these new certificates, select the `InvokeHTTP` processor, then in its `Configuration` under `PROPERTIES`, click on the arrow as below:
 
-<img alt="nifi-invoke-http" src="/assets/images/2017-08-31/nifi-invoke-http.png" width="600px"/>
+<img alt="nifi-invoke-http" src="/assets/images/2017-08-31/nifi-invoke-http.png" width="590px" style="border: 1px solid #e0e0e0;"/>
 
 In the new modal window select the `StandardSSLContextService`, then hit the info circle to edit its properties. Now set the `Keystore Type` and `Truststore Type` to JKS, then the `Keystore Filename` to the location of your KeyStore and the `Truststore Filename` to the location of your TrustStore. Finally, set the passwords to the values you provided in the above script. Hit OK, then use the lighting bolt on the righthand side of the row to enable your new ContextService. If all goes well you should now be able to connect to HTTPS URIs.
 
@@ -183,7 +185,7 @@ java `cat conf-quickstart/druid/middleManager/jvm.config | xargs` -cp "conf-quic
 
 After starting the above processes, check the Druid Console at [http://localhost:8081](http://localhost:8081) to make sure everything looks good.
 
-<img alt="druid-console" src="/assets/images/2017-08-31/druid-console.png" width="600px"/>
+<img alt="druid-console" src="/assets/images/2017-08-31/druid-console.png" width="590px"/>
 
 To manage the continuous process that indexes Kafka data, we'll download, change directories, and run Druid's Tranquility extension. Assuming you're in the same directory with the folder that Druid 0.10 was installed, use the following to get the [lastest version](http://static.druid.io/tranquility/releases/tranquility-distribution-0.9.0.tgz), decompress it, and then run it:
 
@@ -359,11 +361,11 @@ superset runserver
 
 Finally, we need to add a Druid cluster in superset so that we can access the data stored in the Druid index. To do this, visit the dashboard at [http://localhost:8088](http://localhost:8088), the navigate to the `Sources` item in the top menu bar then choose the `Druid Clusters` option.
 
-<img alt="superset-dashboard" src="/assets/images/2017-08-31/superset-dashboard.png" width="600px"/>
+<img alt="superset-dashboard" src="/assets/images/2017-08-31/superset-dashboard.png" width="590px" style="border: 1px solid #e0e0e0;"/>
 
 This list should be empty. Hit the teal plus button on the left hand side and enter the below information for your new Druid Cluster.
 
-<img alt="superset-cluster" src="/assets/images/2017-08-31/superset-cluster.png" width="300px"/>
+<img alt="superset-cluster" src="/assets/images/2017-08-31/superset-cluster.png" width="300px" style="border: 1px solid #e0e0e0;"/>
 
 Now return to the `Sources` menu at the top and select `Refresh Druid Metadata`. After this, again in the `Sources` menu, navigate to `Druid Datasources` and you will see your `ona-json` Datasource. This is the datasource either streaming in, if you used the NiFi and Kafka setup, or from the static JSON file, if you posted data to the indexer.
 
