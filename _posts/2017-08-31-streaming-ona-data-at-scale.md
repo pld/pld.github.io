@@ -111,9 +111,9 @@ To use these new certificates, select the `InvokeHTTP` processor, then in its `C
 
 <img alt="nifi-invoke-http" src="/assets/images/2017-08-31/nifi-invoke-http.png" width="590px" style="border: 1px solid #e0e0e0;"/>
 
-In the new modal window select the `StandardSSLContextService`, then hit the info circle to edit its properties. Now set the `Keystore Type` and `Truststore Type` to JKS, then the `Keystore Filename` to the location of your KeyStore and the `Truststore Filename` to the location of your TrustStore. Finally, set the passwords to the values you provided in the above script. Hit OK, then use the lighting bolt on the righthand side of the row to enable your new ContextService. If all goes well you should now be able to connect to HTTPS URIs.
+In the new modal window select the `StandardSSLContextService`, then hit the info circle to edit its properties. Now set the `Keystore Type` and `Truststore Type` to JKS, then the `Keystore Filename` to the location of your KeyStore and the `Truststore Filename` to the location of your TrustStore. Finally, set the passwords to the values you provided in the above script. Hit OK, then use the lightning bolt on the righthand side of the row to enable your new ContextService. If all goes well you should now be able to connect to HTTPS URIs.
 
-To get some data, go back to the flow window, edit the `InvokeHTTP` component to set your Ona username, password, and form ID in the URL field. Edit the `PutFile` component to specify a directory to write flat files to (this is useful for debugging the data returned by the API and processed by NiFi). Now start the `InvokeHTTP`, `LogAttribute`, `SplitJson`, `ExecuteScript`, and `PutFile` processes. You should queues filling and files accumulating in the directory that you have specified. If all looks good, stop the processes and let's move on to the next step.
+To get some data, go back to the flow window, edit the `InvokeHTTP` component to set your Ona username, password, and form ID in the URL field. Edit the `PutFile` component to specify a directory to write flat files to (this is useful for debugging the data returned by the API and processed by NiFi). Now start the `InvokeHTTP`, `LogAttribute`, `SplitJson`, `ExecuteScript`, and `PutFile` processes. You should see queues filling and files accumulating in the directory that you have specified. If all looks good, stop the processes and let's move on to the next step.
 
 ### Real-time Stream Processing using Kafka
 
@@ -144,7 +144,7 @@ git clone https://github.com/yahoo/kafka-manager.git
 cd kafka-manager
 ```
 
-Next we'll build the Kafka Manager and run it in the foreground. Since this is s a Scala project be sure you have the Scala Build Tool (`sbt`) installed, e.g. `brew install sbt`.
+Next we'll build the Kafka Manager and run it in the foreground. Since this is a Scala project be sure you have the Scala Build Tool (`sbt`) installed, e.g. `brew install sbt`.
 
 ```sh
 sbt clean dist
@@ -258,9 +258,9 @@ To read from a Kafka stream we will define a configuration file to describe a da
 }
 ```
 
-This instructs Tranquility to read from the topic `ona-api-test` and push the messages that it receives into a Druid data source called `ona-kafka`. In the messages it reads Tranquility uses the `_submission_time` column (or key) to represent the time stamp. What is particularly unusually about this file is that we set a very large `windowPeriod` of `PT720000M`. We do this because Druid will ignore any messages with times outside of the `windowPeriod`. Because we are using historical data for this test, our time stamps are outside of the typical hour or so window period.
+This instructs Tranquility to read from the topic `ona-api-test` and push the messages that it receives into a Druid data source called `ona-kafka`. In the messages it reads Tranquility uses the `_submission_time` column (or key) to represent the time stamp. What is particularly unusual about this file is that we set a very large `windowPeriod` of `PT720000M`. We do this because Druid will ignore any messages with times outside of the `windowPeriod`. Because we are using historical data for this test, our time stamps are outside of the typical hour or so window period.
 
-We can start of an indexer task using our `ona-kafka.json` spec with:
+We can start an indexer task using our `ona-kafka.json` spec with:
 
 ```
 bin/tranquility kafka -configFile ../druid-0.10.0/ona-kafka.json
@@ -359,7 +359,7 @@ Then, start Superset with:
 superset runserver
 ```
 
-Finally, we need to add a Druid cluster in superset so that we can access the data stored in the Druid index. To do this, visit the dashboard at [http://localhost:8088](http://localhost:8088), the navigate to the `Sources` item in the top menu bar then choose the `Druid Clusters` option.
+Finally, we need to add a Druid cluster in SuperSet so that we can access the data stored in the Druid index. To do this, visit the dashboard at [http://localhost:8088](http://localhost:8088), then navigate to the `Sources` item in the top menu bar then choose the `Druid Clusters` option.
 
 <img alt="superset-dashboard" src="/assets/images/2017-08-31/superset-dashboard.png" width="590px" style="border: 1px solid #e0e0e0;"/>
 
@@ -404,7 +404,7 @@ would become three records. The first of which is the outer record and has an as
 }
 ```
 
-The second of which is the first nested JSON map referencing it's parent through `__parent__` and storing its original key in `__label__`:
+The second of which is the first nested JSON map referencing its parent through `__parent__` and storing its original key in `__label__`:
 
 ```json
 {
@@ -436,7 +436,7 @@ This structure allows children to easily query parents but not the other way aro
 }
 ```
 
-The major weakness of this approach is that it adds a significant amount of structural complexity to the datasets. Relatedly, if we expected all our records to have the same key value pairs, they no longer would. An alternative approach is to flatten our data by pushing all nested keys to the top layer and renaming these keys using the parent keys as prefixes. Again reserving the `__.+__` namespace pattern for generated keys and also using it as a separator, this would produce a final JSON map of:
+The major weakness of this approach is that it adds a significant amount of structural complexity to the datasets. Relatedly, if we expected all our records to have the same key-value pairs, they no longer would. An alternative approach is to flatten our data by pushing all nested keys to the top layer and renaming these keys using the parent keys as prefixes. Again reserving the `__.+__` namespace pattern for generated keys and also using it as a separator, this would produce a final JSON map of:
 
 ```json
 {
