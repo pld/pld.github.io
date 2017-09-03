@@ -369,6 +369,10 @@ This list should be empty. Hit the teal plus button on the left hand side and en
 
 Now return to the `Sources` menu at the top and select `Refresh Druid Metadata`. After this, again in the `Sources` menu, navigate to `Druid Datasources` and you will see your `ona-json` Datasource. This is the datasource either streaming in, if you used the NiFi and Kafka setup, or from the static JSON file, if you posted data to the indexer.
 
+You can now use SuperSet to explore this dataset. Try creating some queries against it and visualizing the outputs.
+
+<img alt="data-flow" src="/assets/images/2017-08-31/superset-image.png" width="590px"/>
+
 ### Future Work
 
 #### Differentiate Batch and Stream Ingestion
