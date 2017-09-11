@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Streaming Ona Data at Scale
+title: Streaming Ona Data with NiFi, Kafka, Druid, and Superset
 categories:
 - General
 tags: []
