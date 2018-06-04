@@ -3,7 +3,7 @@ lsi: false
 name: pld
 markdown: kramdown
 paginate: 5
-highlighter: true
+highlighter: rouge
 safe: true
 
 css:
