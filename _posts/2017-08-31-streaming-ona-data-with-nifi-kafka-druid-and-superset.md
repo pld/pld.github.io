@@ -29,7 +29,7 @@ The queries may be complex, e.g. containing grouping, filtering, and aggregation
 
 When all integrated, the data flow looks like this:
 
-<img alt="data-flow" src="/assets/images/2017-08-31/data-flow.png" width="590px"/>
+<center><img alt="data-flow" src="/assets/images/2017-08-31/data-flow.png" width="500px"/></center>
 
 <!-- more -->
 

@@ -16,8 +16,6 @@ An essential part of ensuring that people have equitable access to services is b
 
 By training a deep learning model we are able to predict, from an image, whether a water point is functional or not with around 80% accuracy. Analyzing network activations shows that the model appears to be identifying a latent structure in the images. Given this, we expect the prediction accuracy to increase as the dataset expands.
 
-![model performance](/assets/images/2018-02-28/split_handpump_Adam_le-4_do05_32_100_performance.png)
-
 <!-- more -->
 
 ## Introduction
@@ -44,7 +42,7 @@ We experimented with a number of different dropout rates, optimizers, learning r
 ## Results
 We found that a learning rate of 10<sup>-4</sup> provided the best results. Nadam did not produce good results, but the other optimizers performed reasonably well, all leveling off after around 100 training epochs. A dropout proportion of 0.5 appeared to perform the best, with performance increasingly negatively affected farther from that value.
 
-![model performance](/assets/images/2018-02-28/split_handpump_Adam_le-4_do05_32_100_performance.png)
+<center><img alt="model performance" src="/assets/images/2018-02-28/split_handpump_Adam_le-4_do05_32_100_performance.png" width="500"></center>
 
 The above graph shows the loss and accuracy for the training and validation data over 100 epochs. With accuracy higher is better, whereas with loss lower is better. We see that over time both the training and validation set accuracies increase, while the losses decrease. This particular model was trained using the Adam optimizer with a learning rate of 10<sup>-4</sup>, dropout of 0.5, and batch size of 32. After 100 epochs the validation accuracy appears to have stabilized.
 
@@ -52,7 +50,7 @@ At the 100th epoch the training loss is 0.3572, training accuracy is 0.8433, val
 
 To gain insight into how the model is creating its predictions we will look at a couple of example classifications. The left hand column below shows scaled waterpoint images, and the right hand column shows the activation values for that image from a section of the neural network.
 
-![images and network activations](/assets/images/2018-02-28/images_activations.png)
+<center><img alt="images and network activations" src="/assets/images/2018-02-28/images_activations.png" width="500"></center>
 
 The model correctly predicts that the top image above is a functional water point and that the bottom image is not functional. In this model each image is given a score between 0 and 1, with 0 meaning the model is confident the waterpoint is functional, and 1 meaning the model is confident the waterpoint is broken. The top image received a score of 0.00774 and the bottom received a score of 0.907150.
 
