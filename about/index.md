@@ -13,6 +13,3 @@ language processing to search, learning, data mining, and international
 development.
 
 I release open source software as [pld on github](https://github.com/pld).
-
-We are compiling photos of [Doris Lubell](
-http://dorislubell.org/)'s artwork.
