@@ -19,9 +19,9 @@ Use the `unify_names` function to combine multiple countries and/or provinces/st
 
 Use the `plot` function to produce total cases and case per day charts for a set of `countries` and `metrics`, passed as parameters.
 
-<img src="assets/images/2020-03-15/total-cases.png" alt="Total Cases" width="600px">
+<img src="/assets/images/2020-03-15/total-cases.png" alt="Total Cases" width="600px">
 
-<img src="assets/images/2020-03-15/case-increase.png" alt="Case Increase" width="600px">
+<img src="/assets/images/2020-03-15/case-increase.png" alt="Case Increase" width="600px">
 
 # Naive Time Series Models
 
@@ -35,14 +35,14 @@ The `grid_search` function takes a map from forecasting functions to a list of c
 
 On March 15th, 2020, when evaluating the US case count, an ARIMA model with order (2, 1, 4) had the lowest MSE of 4,933. The below chart plots the actual and predicted values for the testing data.
 
-<img src="assets/images/2020-03-15/best-model-test-fit.png" alt="ARIMA best fit" width="600px">
+<img src="/assets/images/2020-03-15/best-model-test-fit.png" alt="ARIMA best fit" width="600px">
 
 Below is the result if we have this best fit model (best as in lowest MSE) predict the number of cases for the next two weeks. The gap is because we do not connect the last day of actual data to the first day of predicted data. We show predicted cases as a red dotted line.
 
-<img src="assets/images/2020-03-15/best-model.png" alt="Models" width="600px">
+<img src="/assets/images/2020-03-15/best-model.png" alt="Models" width="600px">
 
 Looking at a wider set of models, below is the result for the next week showing all models with a MSE below 20,000 in pink and the best model in dark red. We see that when considering all our models there are a variety of possible outcomes.
 
-<img src="assets/images/2020-03-15/high-mse-models.png" alt="Predictive" width="600px">
+<img src="/assets/images/2020-03-15/high-mse-models.png" alt="Predictive" width="600px">
 
 There are many other factors and methods that would improve these models. This is meant as a review of time series analysis methods and not to accurately predict the future course of the pandemic. Please take a look at the [COVID-19 Time Series Analysis IPython Notebook](https://github.com/pld/covid-19-time-series-analysis/blob/master/covid-19-time-series-analysis.ipynb) to explore and extend the code.
