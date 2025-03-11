@@ -1,6 +1,6 @@
 HL7 FHIR provides a standardized and popular way for digital health systems to represent health data and  associated processes. We are excited to introduce Quest, an open source app that lets you use FHIR to define forms and capture data to take advantage of the growing Android FHIR and WHO SMART guidelines ecosystem.
 
-<img src="/assets/images/2022-02-25/quest_ecosystem.png.png" alt="Quest ecosystem" width="600px">
+<img src="/assets/images/2022-02-25/quest_ecosystem.png" alt="Quest ecosystem" width="600px">
 
 As digital health platforms embrace FHIR, the barriers to interoperability will decrease, making it possible to interact with patient data across different health systems to inform clinical decisions and coordinate care. Adoption of FHIR also enables semantic interoperability, i.e. the ability to exchange and understand data with unambiguous, shared meaning across systems. This standardization and aggregation of data is needed for health systems to generate and operationalize ML/AI driven insights.
 
