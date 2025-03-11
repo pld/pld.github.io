@@ -1,3 +1,17 @@
+---
+layout: post
+title: Symposium on Open Guidelines for RDTs
+categories:
+- General
+tags: []
+author_id: 2
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+
 What would the world look like if everyone had access to Rapid Diagnostic Tests for Covid-19, Malaria, and other communicable diseases, that could be read and easily understood on a smartphone, and that were used as soon as the first person in your community showed symptoms?
 
 Last Thursday and Friday, the Ona Team had the honor of hosting an exceptionally productive Symposium on Open Guidelines for RDTs to discuss this and other questions. We were happy to see the enthusiastic participation and insightful questions coming from everyone who joined us. Below is the welcome slide deck, to give you a sense of the content.

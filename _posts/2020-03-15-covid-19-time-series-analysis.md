@@ -1,4 +1,16 @@
-# COVID-19 Time Series Analysis
+---
+layout: post
+title: COVID-19 Time Series Analysis
+categories:
+- General
+tags: []
+author_id: 2
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
 
 Here we analyze the COVID-19 case data to create simple charts and time series models. This is meant as a review of time series analysis methods and not to accurately predict the future course of the pandemic. These models are based on the daily case data only, they are all univariate, and they do not consider environmental changes (e.g. travel restrictions, quarantines, and event cancellations).
 

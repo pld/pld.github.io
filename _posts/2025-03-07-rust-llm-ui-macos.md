@@ -1,4 +1,16 @@
-# Building a macOS UI for Ollama GenAI models in Rust
+---
+layout: post
+title: Building a macOS UI for Ollama GenAI models in Rust
+categories:
+- General
+tags: []
+author_id: 2
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
 
 As we integrate AI dev tools into our teams, I experimented by writing a desktop app in a language I have never used relying on LLM code generation. I primarily used Claude via web and API through [aider](https://aider.chat/), with some help on more generic Rust questions from Gemini Advanced.
 

@@ -1,3 +1,17 @@
+---
+layout: post
+title: WHO Smart Guidelines for Universal Health Access
+categories:
+- General
+tags: []
+author_id: 2
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+
 Half of the world’s population is <a href="https://www.who.int/news/item/13-12-2017-world-bank-and-who-half-the-world-lacks-access-to-essential-health-services-100-million-still-pushed-into-extreme-poverty-because-of-health-expenses">unable to obtain essential health services</a> or the typical healthcare services offered in large facilities. The rise of community health workers and community health service programs have been transformative, but they are at the limits of their ability to improve outcomes. <!--more-->In our work in underdeveloped nations around the world, we have heard community health workers report being overburdened and saddled with increasing responsibilities.
 
 Recent developments show a realization that providing health services to 4 billion underserved people will require transitioning to digital tools, including smartphones, for data collection and service delivery tracking. As the smartphone’s availability and capability has increased, it has become a critical tool for delivering healthcare, especially to those at the limits of existing health system service networks. Both healthcare practitioners visiting homes and based in facilities use healthcare apps to register, monitor, and deliver services to patients. These apps and the smartphones they run on function as off-line capable EMRs with use-case specific features for the particular health services they are delivering.

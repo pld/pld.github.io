@@ -1,3 +1,17 @@
+---
+layout: post
+title: FHIR-native case management with Quest and OpenSRP
+categories:
+- General
+tags: []
+author_id: 2
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+
 HL7 FHIR provides a standardized and popular way for digital health systems to represent health data and  associated processes. We are excited to introduce Quest, an open source app that lets you use FHIR to define forms and capture data to take advantage of the growing Android FHIR and WHO SMART guidelines ecosystem.
 
 <img src="/assets/images/2022-02-25/quest_ecosystem.png" alt="Quest ecosystem" width="600px">
