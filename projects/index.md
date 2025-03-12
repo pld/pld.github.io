@@ -7,6 +7,11 @@ title: Home
 
 ### Research
 
+**Health Technology**
+
+* 2022 [OpenSRP for health digitalization in Bangladesh, Indonesia, Pakistan](https://ona.io/home/opensrp-for-health-digitalization-in-bangladesh-indonesia-pakistan/)
+* 2022 [Transforming RDTs for Precision Public Health](https://ona.io/home/transforming-rdts-for-precision-public-health/)
+
 **Information Retrieval**
 
 * 2011 [Improving Result Diversification using PLSI](/projects/research/result-diversification.html)
