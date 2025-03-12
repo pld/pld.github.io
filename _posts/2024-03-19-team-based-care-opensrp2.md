@@ -43,10 +43,8 @@ Some of the challenges reported by health workers, government supervisors, and p
 * Data is for reporting only not for providing feedback to frontline workers, supervisors and community members nor for taking actions in a real time basis;
 * Difficulty managing patients at scale. Health workers need to manage thousands of patients and schedule visits manually on paper, which has led to missed appointments for essential health services.
 
-<center>
-
-<img src="/assets/images/2024-03-19/menu-screen.png" alt="" width="223px"/>
-<img src="/assets/images/2024-03-19/profile-screen.png" alt="" width="223px"/>
+<img src="/assets/images/2024-03-19/menu-screen.jpg" alt="" width="223px"/>
+<img src="/assets/images/2024-03-19/profile-screen.jpg" alt="" width="223px"/>
 
 *Figure 2: The left panel shows the main menu in the BidanKu app, where midwives can select the particular set of clients they are interested in viewing. The right panel shows the patient view for a synthetic patient and the dropdown menu with actions to take for that synthetic patient.*
 
