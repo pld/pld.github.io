@@ -1,0 +1,46 @@
+---
+layout: post
+title: Distributed Classification with ADMM
+categories:
+- General
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+---
+<p>Today Jon Sondag and I presented our paper on ADMM for Hadoop at the<a
+  href="http://www.ischool.drexel.edu/bigdata/bigdata2013/"> IEEE BigData 2013</a>
+conference.</p>
+
+<p>The paper describes our implementation of Boyd's ADMM algorithm in Hadoop Map
+Reduce.  We talk about the statistical details of implementing ADMM as well as
+the nuances of storing state on Hadoop.</p>
+
+<p>In our presentation we present background on the data pipeline we have built at
+Intent Media and motivate why a Hadoop Map Reduce job is the appropriate
+run-time for us to use.  We mention the alternatives for building distributed
+logistic regression models, such as sampling the data, <a
+  href="https://mahout.apache.org/">Apache Mahout</a>, <a
+  href="http://hunch.net/~vw/">Vowpal Wabbit</a>, and <a
+  href="http://spark.incubator.apache.org/">Spark</a>.</p>
+
+<p>We also discuss alternatives specifically designed for iterative computation
+on Hadoop, such as <a href="http://code.google.com/p/haloop/">HaLoop</a> and <a
+  href="http://www.iterativemapreduce.org/">Twister</a>.</p>
+
+<p>Our presentation is below:</p>
+
+<p><script async class="speakerdeck-embed"
+    data-id="1c9a907013390131b9aa3e3d4895b539" data-ratio="1.33333333333333"
+    src="//speakerdeck.com/assets/embed.js"></script></p>
+
+<p>You may also read the full paper <a
+href="/assets/pdfs/pld_js_ieee_bigdata_2013_admm.pdf">Practical Distributed Classification using
+the Alternating Direction Method of Multipliers Algorithm</a>.</p>
+
+<p>The paper describes our open source Hadoop based implementation of the <a
+href="https://github.com/intentmedia/admm">ADMM
+algorithm</a> and how to use it to compute a
+distributed logistic regression model.</p>

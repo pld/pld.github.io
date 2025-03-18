@@ -1,0 +1,60 @@
+---
+layout: post
+title: VoIP Watermarking Defenses
+categories:
+- General
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+---
+<p>A couple of years ago (2005) the Rome Air Force Base sponsored research [1]
+into de-anonymizing VoIP traffic. The researchers developed a modification to
+the Linux Kernel which inserted a watermark into Skype VoIP traffic that is
+passed through a low-latency anonymizing network. A 24-bit watermark is
+inserted through the modulation of the inter-packet timing of data packets.
+This is essentially the establishment of a covert channel through a timing
+attack.</p>
+
+<p>The attacker reads the probabilistically hidden bits in the traffic to
+reconstruct and identify of the originating and terminating nodes of a VoIP
+call. A defense against this would be to scrub your outgoing traffic to remove
+the covert channel or increase the probability of error in bit recovery beyond
+the acceptable rate. The attacker is not manipulating packets as they leave the
+origin, since then they would presumably already know the origin. The suggested
+implementation is to watermark packets as they transit through a VoIP gateway.
+Because of this it is necessary to scrub packets beyond the gateway; after they
+have been marked.</p>
+
+<p>More interesting would be to alter the packet timing in a controlled manner
+and embed bits of your choosing. If you had enough knowledge as to how bit
+patterns are assigned to identities you could arbitrarily alter your identity
+and pose as another. You could also add incorrect watermarks to random VoIP
+traffic.</p>
+
+<p>To detect a watermark you can exploit the embedding process. The technique
+relies on existing latency in the VoIP calls and is able to function with
+around 20ms - 30ms of latency by making a 3ms adjustment to packet arrival
+times. A suggestion is to make the latency as low as possible therefore making
+the existence of a watermark more detectable since the latency would need to be
+adjusted to unexpected levels. It may not be feasible to keep low latency for a
+long period of time but that would not necessarily be necessary. Latency could
+intermittently be pushed to the lowest possible levels and a check for embedded
+bits could be performed. The method uses the existing latency in the first
+minutes of the call to determine what an acceptable level of latency to add is.
+Exploiting this, the first minutes (or so) of the call could be made with high,
+but still believable, latency so the attacker embeds bits with the appropriate
+higher latency. Once a watermark has been embedded the latency could be
+significantly reduced and the alteration of packet timing should be
+noticeable.</p>
+
+<p>Covert channels based on packet timing have many applications, beyond
+de-anonymization, and could be made very difficult to detect. Steganographic
+style embedding of traffic is a possibility as well as watermarking for
+authentication purposes by the originating and terminating parties.</p>
+
+<p>[1] S. Chen, S. Jajodia, and X. Wang. Tracking Anonymous Peer-to-Peer VoIP
+Calls on the Internet. In CCS '05. ACM, November 2005</p>
