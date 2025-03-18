@@ -1,0 +1,43 @@
+---
+layout: post
+title: Using Video as a Covert Channel
+categories:
+- General
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+---
+<p>With steganography being all the rage these days why not up the ante and use
+video as a covert channel?  (I haven't looked around for this but I bet someone
+else is already doing it.)  With all the bandwidth, and the data already being
+put through some sort of transcoding, the opportunity to embed seems ripe.  I'm
+not sure how this would work, but let's assume the process is: (a) hardware
+camera, (b) software transcoding and compression of signal, (c) network
+traversal, (d) software transcoding and decompression of data, (e) video
+display.  We'll assume adding data before (b) and extracting data after (d)
+will not work due to loss from the transcoding.  To do live video stego insert
+a step between (b) and (c) to add data and between (c) and (d) to extract
+data.  The method would be rather detectable.  A better solution may be to
+drown yourself in transcoding and (de)compression code for a while and develop
+a stego (or stego capable) codec or a stego module for either a specific
+existing codec or any codec satisfying certain requirements.  (Do these exist
+already?)</p>
+
+<p>Embedding of small amounts of data should be difficult to detect.  A simple
+(well, maybe) exercise would be to embed a chat in a video conference.  Binary
+files, VoIP, other video conferences, multimedia files, or any sort of network
+traffic are all nice things to be able to embed.</p>
+
+<p>The hardest needle to find is the needle you're not looking for.</p>
+
+<p>(Relatedly, it would be desirable to be able to determine if someone has
+found your covert channel.  How or if this could be done using lacking some
+sort of quantum crypto I'm not sure.  Use of an additional channel to influence
+the convert channel in ways known by the covert parties might work but not be
+provably correct.  The idea would be that when an ease dropper is present their
+would be some impediment to making the expected change in the channel, similar
+to quantum crypto.  Although, "some impediment" is pointlessly vague.)</p>
