@@ -1,0 +1,89 @@
+---
+layout: post
+title: A P2P Telecom
+categories:
+- General
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+---
+<p>Update 02/2011:
+I just became aware of <a href="http://www.servalproject.org/">The Serval
+    Project</a> which addresses the same idea:
+<blockquote>Communicate anywhere, any time … without infrastructure, without mobile  towers, without satellites, without wifi hotspots, and without carriers.  Use existing off-the-shelf mobile cell phone handsets. Use your  existing mobile phone number wherever you go, and never pay roaming  charges again.</blockquote>
+They have code for their <a href="https://github.com/servalproject/batphone">phone app</a> and their <a href="https://github.com/servalproject/serval-dna">distributed naming system</a> available.
+
+<p>Below I present the idea for a P2P Telecom.  That is, a telecom in  which traffic is routed from sender to receiver through peers.  Not through a central hub controlled by a company.
+
+<h4>Cons against this implementation.</h4>
+<ol>
+	<li>You will only benefit from a P2P telecom if the people you're communicating with are using the P2P telecom.</li>
+</ol>
+
+<h4>Pros in favor of a P2P Telecom.</h4>
+<ol>
+	<li>Since  users will be controlling the network, users will be setting the prices  and it will benefit all users for prices to be as low as possible.   This is a stark contrast to the current system where prices are set by a  handful of powerful companies with little worry of losing subscribers.</li>
+	<li>No  additional infrastructure will need to be put in place.  In fact,  towers, antennas, relays, etc. can be removed from densely populated  areas because they are unnecessary for a P2P Telecom to function.</li>
+	<li>A  P2P Telecom will have more privacy because you will trust no one but  yourself and encryption levels you control.  If you want to use a  theoretically unbreakable but data intensive encryption protocol that's  up to you and no one will know your data but you and the other user you  are communicating with.  Like any communications system, the privacy of a  P2P Telecom is not perfect but, as any cryptographer worthy of their  title will tell you, the system is open and this is leaps and bounds  more secure than the closed systems of big industry telecoms.</li>
+	<li>There  is no centralized control.  This helps to enable better data security  and increased privacy, among other things.  Without centralized control  no one will be able to shut off the network and there will be no data  overloads in case of an emergency (such as happened in New York City  during September 11, 2001).</li>
+	<li>There will be increased  capacity.  This lack of centralized control enables increased capacity  and redundancy in populated areas beyond anything approachable by  current industry telecoms.</li>
+	<li>A P2P Telecom can transfer any  form of data.  Because of their popularity phone calls are the most  obvious forms of data to be transferred but if desired the network can  transfer anything else such as video or raw data.</li>
+</ol>
+
+<p>It is clear to me that the pros of a P2P Telecom definitively outweigh the
+cons and it is time we start building this network, which turns out to be
+rather simple.</p>
+<p class="center"><a href="/assets/images/p2p_telecom.png"><img
+    src="/assets/images/p2p_telecom.png" alt="P2P Telecom" width="500"
+    height="395"/></a></p>
+
+<h4>The Implementation of a P2P Telecom</h4>
+<p>The implementation is based on modifying the functionality of existing cell
+phones be they GSM, CDMA, or some other unheard of system.</p>
+
+<p>Cell phones must be retrofit so they can act as peers with one another.  At
+their core cell phones send and receive signals, these phones must be modified
+so that they can receive and send signals directly from and to other
+phones.</p>
+</p>
+
+<ol>
+	<li>Accomplishing this may or may not require  hardware modification.  If hardware modification is required we must  determine how this can be done.  One simple method would be the use of a  modified SIM chip.  If the change needed is more fundamental a  systematic approach to performing it can be developed.</li>
+	<li> Software modification will be required.  We must:
+<ol>
+	<li>Change what type of signals the phone looks for so that it can find signals from other phones</li>
+	<li>Change how the phone interprets the signals it finds so that it can interpret them as:
+<ul>
+	<li> Data passing.  The phone must know how to move data from itself to  other peers.  This will require an algorithm informing the phone of the  priorities for where to forward data it receives.  This algorithm will  benefit from, but not require, partial location awareness of peers and  unique identification of peers.  This can all be done while maintaining  anonymity.</li>
+	<li>Data receiving.  The phone must know that this data is destined for it and know how to handle decoding of the data.</li>
+	<li>Data sending.  The phone must be able to uniquely encoded it's data so it is only decodable by the receiver.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+<h4>The Long Distance Uplinks in a P2P Telecom</h4>
+<p>A problem with the described P2P telecom is that if you want to call
+someone outside of your peer neighborhoods range or someone who doesn't  use
+the P2P system you'll have to place the call over the existing  industry
+telecom network.  A solution to this problem is to give every  P2P neighborhood
+an internet uplink and connect multiple neighborhoods  with a VoIP services.
+In this manner, if either of the above situations  occur, the call can be
+placed using VoIP technologies.</p>
+
+<p>The number  of peers with access to the uplink and therefore the bandwidth
+of the  circuit between the peers and the uplink will depend on the volume of
+calls going out of the local neighborhood.</p>
+
+<h4>The Algorithms for a P2P Telecom</h4>
+<ol>
+	<li>Finding a peer and establishing a circuit</li>
+	<li>Sending data through a circuit - Encrypt data using public/private key system</li>
+	<li>Throttling of uplink bandwidth - Better to deny calls that increase latency on calls</li>
+	<li>Location anonymnity</li>
+</ol>
